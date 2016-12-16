@@ -1,7 +1,6 @@
 {% set partners = __SELF__.partners %}
 
 <div class="partners" style="text-align:center;">
-    <h2>Partners</h2>
     {% for partner in partners %}
         {% if partner.url %}
             <a href="{{partner.url}}" target="_blank" rel="noopener noreferrer">

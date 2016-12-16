@@ -1,0 +1,14 @@
+{% set partners = __SELF__.partners %}
+
+<div class="partners" style="text-align:center;">
+    <h2>Partners</h2>
+    {% for partner in partners %}
+        {% if partner.url %}
+            <a href="{{partner.url}}" target="_blank" rel="noopener noreferrer">
+                <img src="/storage/app/media{{partner.image}}" width="120px" alt="{{ partner.name }}" style="display: inline-block;margin-left: auto;margin-right: auto;"/>
+            </a>
+        {% else %}
+            <img class="partnerlogo" src="/storage/app/media{{partner.image}}" width="120px" alt="{{ partner.name }}" style="display: inline-block;margin-left: auto;margin-right: auto;"/>
+        {% endif %}
+    {% endfor %}
+</div>
